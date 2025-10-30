@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Booking Form</title>
+
+    <link rel = "icon" href = "/images/vacation-icon.png">
+    <link rel = "stylesheet" href = "/styles/vacation.css">
+    <script src = "js/vacation.js" defer></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Book Your Dream Vacation</h1>
+        </header>
+    
+        <form id = "vacation-form" action = "/submit-form" method = "post">
+            <label for = "destination">Destination</label>
+            <select name = "destination" id = "destination">
+                <option value = "none">Choose a destination...</option>
+  	            <option value = "bali">Bali, Indonesia</option>
+  	            <option value = "paris">Paris, France</option>
+  	            <option value = "tokyo">Tokyo, Japan</option>
+                <option value = "maldives">Maldives</option>
+                <option value = "newyorkusa">New York City, USA</option>
+            </select>
+            <span id = "err-des" class = "error">A destination must be selected!</span>
+
+            <div class = "row">
+                <div class = "group">
+                    <label for = "date">Departure Date</label>
+                    <input type = "date" id = "date" name = "date">
+                </div>
+
+                <div class = "group">
+                    <label for = "travelnum">Number of Travelers</label>
+                    <input type = "number" id = "travelnum" name = "travelnum" value = "0" min = "0">
+                    <span id = "err-num" class = "error">Number must be greater than 0!</span>
+                </div>
+            </div>
+
+            <button type = "submit">Find My Vacation</button>
+        </form>
+
+        <footer>
+            <a href = "https://github.com/jmakho01/vacation-form">Github Repository</a>
+        </footer>
+    </main>
+</body>
+</html>
